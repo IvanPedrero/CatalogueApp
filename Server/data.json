@@ -1,0 +1,51 @@
+{
+	"empresas":[{
+		"id":"emp_1",
+		"nombre":"Alienware",
+		"desc":"Alienware is an American computer hardware subsidiary of Dell. Their products are designed for gaming and can be identified by their alien-themed designs. Alienware was founded in 1996 by Nelson Gonzalez and Alex Aguila. The company's corporate headquarters is located in The Hammocks, in Miami, Florida.",
+		"ranking":3,
+		"img":"https://mygaming.co.za/news/wp-content/uploads/2011/12/Alienware-Logo.jpg"
+	},{
+		"id":"emp_2",
+		"nombre":"ROG",
+		"desc":"Anyone can build a killer gaming PC in a full-size ATX tower, but it’s much more difficult to finesse high-end hardware into a compact form factor. Even if you get a big graphics card and a beefy CPU to physically fit in a small case, good luck trying to keep them cool.",
+		"ranking":2,
+		"img":"https://rog.asus.com/wp-content/uploads/2011/08/rog-logo-sketch.jpg"
+	},{
+		"id":"emp_3",
+		"nombre":"Legion",
+		"desc":"The Legion line of consumer-oriented laptops was released in February 2017. The Legion brand is the result of Lenovo's own research and development for the computer-loving public. Therefore, Lenovo wanted to attack this market with a clear difference; their computers do not affect too much the pocket of the buyers who compare them with other cheaper brands.",
+		"ranking":5,
+		"img":"https://pbs.twimg.com/profile_images/1054771049802485760/V0McvBpM_400x400.jpg"
+	},{
+		"id":"emp_4",
+		"nombre":"Omen",
+		"desc":"HP is getting back into the gaming world with a new line of products called Omen. The Omen series will feature laptops, desktops, and accessories targeted across different price ranges, from cheaper notebooks up to higher-end towers for serious gamers with a lot of disposable income.",
+		"ranking":2,
+		"img":"https://pcmod.pl/wp-content/uploads/2017/10/omen-by-hp-logo.png"
+	},{
+		"id":"emp_5",
+		"nombre":"Predator",
+		"desc":"Acer Predator es una marca y línea de hardware informático centrada en los jugadores propiedad de Acer. En 2008, Acer se introdujo en el mercado de las computadoras para juegos con una línea de computadoras de escritorio: la serie Acer Aspire Predator, más tarde renombrada como Acer Predator. La serie se caracteriza por el chasis futurista de la computadora y el alto rendimiento. En 2016, existe una gama completa de computadoras de escritorio Predator, portátiles para juegos, tabletas y accesorios.",
+		"ranking":4,
+		"img":"https://i.pinimg.com/originals/12/22/6f/12226f2773961c164e1d09b192dde5c1.jpg"
+	},{
+		"id":"emp_6",
+		"nombre":"Razer",
+		"desc":"Razer Inc. (estilizado como RΛZΞR), es una compañía global de fabricación de hardware para videojuegos establecidos en 2005 por el empresario de Singapur Min-Liang Tan y Robert Krakoff, después de obtener una gran inversión de Li Ka-shing, magnate de Hong Kong, y de Temasek Holdings de Singapur. La compañía tiene doble sede en Singapur y San Francisco, California, y cotiza en la Bolsa de Hong Kong desde noviembre de 2017.",
+		"ranking":5,
+		"img":"https://i.dlpng.com/static/png/5529076-razer-logo-neon-sign-neonsignsukcom-razer-logo-800_800_preview.png"
+	},{
+		"id":"emp_7",
+		"nombre":"Msi",
+		"desc":"Como marca líder mundial de gaming, MSI sigue elevando el nivel de diseño e innovación de sus productos Serie GAMING y ha patrocinado por largo tiempo equipos de eSports internacionales. El trabajo de equipo sobresaliente del personal especializado de IyD y los gamers profesionales culmina en la creación de cada producto GAMING. En el corazón de la innovación de MSI yace un compromiso ineludible de ofrecer a los Top Players (jugadores de alto nivel) productos Top Choice (la mejor elección). Además de su colaboración con 12 equipos pro-gaming de todo el mundo, MSI es también un activo participante de torneos de gaming internacionales y el anfitrión de Beat IT, un evento de gaming de renombre mundial. Impresionante en calidad y desempeño, la serie MSI GAMING ha comprobado que cubre las necesidades más demandantes para los torneos, ofreciendo a los pro-gamers el mejor desempeño y llevándolos a una victoria tras otra en los eSports mundiales. Estos equipos dominantes de eSports y gamers profesionales confían y elijen a la Serie MSI GAMING que los ayuda a lograr más objetivos en su pelea por el campeonato mundial.",
+		"ranking":5,
+		"img":"https://i.ytimg.com/vi/Qt0GFuslOjk/maxresdefault.jpg"
+	},{
+		"id":"emp_8",
+		"nombre":"AKRacing",
+		"desc":"AKRacing le pone en la primera línea del cambio con diseños nuevos, colores llamativos y atención al detalle líder en la industria. La revolución de AKRacing continúa con nuestra ergonomía única y una calidad de construcción incomparable, todas respaldadas por nuestra garantía sin precedentes de 5/10* años, y termina con la comodidad y el control que ofrecemos a todos nuestros clientes. ¡Únase a la AKRacing Gaming Chair Revolution™ y póngase en el asiento del conductor!",
+		"ranking":4,
+		"img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNy4cXYY1eO6d2CPuYjQu3apYux587QiAZqjt5pXoiF5hCugR0&s"
+	}]
+}

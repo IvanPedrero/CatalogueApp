@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -28,8 +29,6 @@ public class VolleyActivity extends AppCompatActivity {
         getJsonRequest();
     }
 
-
-
     public void goBackToList(View view) {
         Intent i = new Intent(this, MainActivity.class);
         startActivity(i);
@@ -52,7 +51,7 @@ public class VolleyActivity extends AppCompatActivity {
                         try {
                             JSONArray jsonArray = response.getJSONArray("empresas");
 
-                            Product[] products = new Product[jsonArray.length()];
+                            Product[] empresas = new Product[jsonArray.length()];
 
                             for (int i = 0; i < jsonArray.length(); i++) {
                                 JSONObject empresa = jsonArray.getJSONObject(i);
@@ -62,6 +61,7 @@ public class VolleyActivity extends AppCompatActivity {
                                 String desc = empresa.getString("desc");
                                 String img = empresa.getString("img");
                                 int ranking = empresa.getInt("ranking");
+                                String website = empresa.getString("website");
 
                                 Product e = new Product();
                                 e.emp_id = id;
@@ -69,11 +69,12 @@ public class VolleyActivity extends AppCompatActivity {
                                 e.description = desc;
                                 e.image = img;
                                 e.ranking = ranking;
+                                e.website = website;
 
-                                products[i] = e;
+                                empresas[i] = e;
                             }
 
-                            databaseTask.execute(products);
+                            databaseTask.execute(empresas);
 
                         } catch (JSONException e) {
                             e.printStackTrace();

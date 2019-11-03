@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#222222">
 
     <View
         android:id="@+id/divider2"
@@ -29,9 +30,11 @@
                 <AutoCompleteTextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorPrimary"
                     android:layout_weight="2"
                     android:id="@+id/searchText"
                     android:fontFamily="sans-serif-light"
+                    android:textColor="@android:color/white"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     />
 
@@ -44,16 +47,20 @@
                     android:fontFamily="sans-serif-light"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     android:onClick="doAction"
-                    />
+                    android:backgroundTint="@color/colorPrimary"
+                    android:textAllCaps="true"/>
+
                 <Button
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorPrimary"
                     android:layout_weight="1"
                     android:text="Reload"
                     android:fontFamily="sans-serif-light"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     android:onClick="goToVolleyScreen"
-                    ></Button>
+                    android:textAllCaps="true"/>
+
             </LinearLayout>
 
 <!--
@@ -73,7 +80,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:listitem="@layout/recycler_item_view"
-                android:id="@+id/recycler_view">
+                android:id="@+id/recycler_view"
+                android:background="#222222">
 
             </androidx.recyclerview.widget.RecyclerView>
         </LinearLayout>

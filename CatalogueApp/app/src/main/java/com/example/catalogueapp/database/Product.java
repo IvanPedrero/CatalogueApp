@@ -24,4 +24,7 @@ public class Product {
 
     @ColumnInfo(name="ranking")
     public int ranking;
+
+    @ColumnInfo(name="website")
+    public String website;
 }

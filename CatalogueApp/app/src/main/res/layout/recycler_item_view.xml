@@ -2,41 +2,58 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="horizontal" android:layout_width="match_parent"
+    android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/recyclerImage"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:padding="3dp"
-        android:layout_height="180px"
-        tools:srcCompat="@tools:sample/avatars"
-        app:civ_border_width="2dp"
-        app:civ_border_color="#FF000000" />
-
-    <TextView
-        android:id="@+id/recyclerProductName"
-        android:layout_width="0dp"
-        android:layout_height="180px"
-        android:layout_weight="3"
-        android:fontFamily="sans-serif-light"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:padding="13dp"
-        android:text="Alienware"
-        android:textColor="#696969"
-        android:textSize="24sp"
-        android:textStyle="normal"></TextView>
-
-    <TextView
-        android:id="@+id/recyclerRating"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="2"
-        android:fontFamily="sans-serif-light"
-        android:text="Rating: 3"
-        android:textSize="15sp" />
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/recyclerImage"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="200px"
+            android:padding="5dp"
+            tools:srcCompat="@tools:sample/avatars"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FF000000" />
+
+        <TextView
+            android:id="@+id/recyclerProductName"
+            android:layout_width="0dp"
+            android:layout_height="180px"
+            android:layout_weight="3"
+            android:fontFamily="sans-serif-light"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:padding="13dp"
+            android:text="Alienware"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="normal"></TextView>
+
+        <TextView
+            android:id="@+id/recyclerRating"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:fontFamily="sans-serif-light"
+            android:text="Rating: 3"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="1"
+        android:background="#e800f0"
+        android:layout_marginTop="10dp"/>
 
 
 </LinearLayout>

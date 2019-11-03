@@ -20,8 +20,8 @@ public interface ProductDAO {
     @Update
     public void update(Product... products);
 
-    @Query ("UPDATE product SET name=:nom, description=:desc, image=:img WHERE emp_id=:id")
-    public void updateProduct(String id, String nom, String desc, String img);
+    @Query ("UPDATE product SET name=:nom, description=:desc, image=:img, website=:website WHERE emp_id=:id")
+    public void updateProduct(String id, String nom, String desc, String img, String website);
 
     @Delete
     public void deleteProduct(Product... products);

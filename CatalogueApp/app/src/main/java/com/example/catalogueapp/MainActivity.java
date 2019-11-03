@@ -15,6 +15,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -23,6 +26,7 @@ import com.example.catalogueapp.database.DatabaseReceiver;
 import com.example.catalogueapp.database.DatabaseTask;
 import com.example.catalogueapp.database.Product;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements DatabaseReceiver {
@@ -43,11 +47,13 @@ public class MainActivity extends AppCompatActivity implements DatabaseReceiver 
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        setAutocomplete();
     }
 
     @Override
     protected void onRestart() {
-        ReloadScreen();
+        setAutocomplete();
+        reloadScreen();
         super.onRestart();
     }
 
@@ -62,10 +68,32 @@ public class MainActivity extends AppCompatActivity implements DatabaseReceiver 
 
     }
     public void doAction(View view){
-        ReloadScreen();
+        reloadScreen();
     }
 
-    private void ReloadScreen(){
+    void setAutocomplete(){
+        final List<String> names = new ArrayList<>();
+        products.searchProducts(getApplicationContext(),"%%").observe(this,
+                new Observer<List<Product>>() {
+                    @Override
+                    public void onChanged(List<Product> products) {
+
+                        if(!products.isEmpty()){
+                            for(int i = 0; i < products.size(); i++){
+                                if (!names.contains(products.get(i).name)) {
+                                    names.add(products.get(i).name);
+                                }
+                            }
+                        }
+                    }
+                });
+
+            AutoCompleteTextView editText = findViewById(R.id.searchText);
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.select_dialog_item, names);
+            editText.setAdapter(adapter);
+    }
+
+    private void reloadScreen(){
         String src = "%"+((EditText)findViewById(R.id.searchText)).getText()+"%";
         products.searchProducts(getApplicationContext(),src).observe(this,
                 new Observer<List<Product>>() {
@@ -94,6 +122,7 @@ public class MainActivity extends AppCompatActivity implements DatabaseReceiver 
                         intent.putExtra("img", companies.get(0).image);
                         intent.putExtra("ranking", companies.get(0).ranking);
                         intent.putExtra("emp_id", companies.get(0).emp_id);
+                        intent.putExtra("website", companies.get(0).website);
 
                         startActivity(intent);
                     }

@@ -29,7 +29,7 @@ public class DatabaseTask extends AsyncTask<Product,Void, List<Product>> {
         }else{
             //Else, update everything except the ranking, which is local.
             for(int i = 0; i< params.length; i++){
-                db.productDao().updateProduct(params[i].emp_id, params[i].name, params[i].description, params[i].image);
+                db.productDao().updateProduct(params[i].emp_id, params[i].name, params[i].description, params[i].image, params[i].website);
             }
         }
 

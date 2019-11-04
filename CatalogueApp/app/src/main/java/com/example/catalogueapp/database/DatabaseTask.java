@@ -20,6 +20,7 @@ public class DatabaseTask extends AsyncTask<Product,Void, List<Product>> {
     @Override
     public void onPreExecute(){
     }
+
     @Override
     protected List<Product> doInBackground(Product... params) {
 
@@ -28,13 +29,17 @@ public class DatabaseTask extends AsyncTask<Product,Void, List<Product>> {
             db.productDao().insertProduct(params);
         }else{
             //Else, update everything except the ranking, which is local.
-            for(int i = 0; i< params.length; i++){
-                db.productDao().updateProduct(params[i].emp_id, params[i].name, params[i].description, params[i].image, params[i].website);
+            for(int i = 0; i < params.length; i++){
+                if(db.productDao().businessExists(params[i].emp_id) == 0){
+                    db.productDao().insertSingle(params[i].emp_id, params[i].name, params[i].description, params[i].image, params[i].ranking, params[i].website);
+                }else{
+                    db.productDao().updateProduct(params[i].emp_id, params[i].name, params[i].description, params[i].image, params[i].website);
+                }
             }
         }
-
         return null;
     }
+
     @Override
     public void onPostExecute(List<Product> result){
         // do something on ui!

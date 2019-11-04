@@ -47,6 +47,8 @@ public class MainActivity extends AppCompatActivity implements DatabaseReceiver 
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        startService(new Intent(this, ToastService.class));
+
         setAutocomplete();
     }
 

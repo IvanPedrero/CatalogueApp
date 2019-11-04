@@ -23,6 +23,12 @@ public interface ProductDAO {
     @Query ("UPDATE product SET name=:nom, description=:desc, image=:img, website=:website WHERE emp_id=:id")
     public void updateProduct(String id, String nom, String desc, String img, String website);
 
+    @Query("SELECT COUNT(*) FROM product WHERE emp_id LIKE :id")
+    public int businessExists(String id);
+
+    @Query ("INSERT INTO product VALUES(:id, :name, :description, :img, :rank, :web)")
+    public void insertSingle(String id, String name, String description, String img, int rank, String web);
+
     @Delete
     public void deleteProduct(Product... products);
 

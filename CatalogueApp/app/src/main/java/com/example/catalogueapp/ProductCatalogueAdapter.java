@@ -41,6 +41,7 @@ public class ProductCatalogueAdapter extends RecyclerView.Adapter {
             pHolder.productName.setText("NONE");
         }
     }
+
     @Override
     public int getItemCount() {
         if( products != null)

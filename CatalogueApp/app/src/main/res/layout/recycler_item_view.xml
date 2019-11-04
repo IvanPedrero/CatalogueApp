@@ -49,10 +49,10 @@
 
     <View
         android:id="@+id/divider5"
-        android:layout_width="match_parent"
+        android:layout_width="320dp"
         android:layout_height="1dp"
-        android:layout_weight="1"
-        android:background="#e800f0"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimary"
         android:layout_marginTop="10dp"/>
 
 

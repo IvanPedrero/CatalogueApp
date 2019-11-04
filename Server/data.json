@@ -8,7 +8,7 @@
 		"website":"https://www.dell.com/en-us/gaming/alienware"
 	},{
 		"id":"emp_2",
-		"nombre":"ROG",
+		"nombre":"R.O.G.",
 		"desc":"Anyone can build a killer gaming PC in a full-size ATX tower, but it’s much more difficult to finesse high-end hardware into a compact form factor. Even if you get a big graphics card and a beefy CPU to physically fit in a small case, good luck trying to keep them cool.",
 		"ranking":2,
 		"img":"https://rog.asus.com/wp-content/uploads/2011/08/rog-logo-sketch.jpg",
@@ -50,8 +50,8 @@
 		"website":"https://us.msi.com/"
 	},{
 		"id":"emp_8",
-		"nombre":"AKRacing",
-		"desc":"AKRacing le pone en la primera línea del cambio con diseños nuevos, colores llamativos y atención al detalle líder en la industria. La revolución de AKRacing continúa con nuestra ergonomía única y una calidad de construcción incomparable, todas respaldadas por nuestra garantía sin precedentes de 5/10* años, y termina con la comodidad y el control que ofrecemos a todos nuestros clientes. ¡Únase a la AKRacing Gaming Chair Revolution™ y póngase en el asiento del conductor!",
+		"nombre":"AK Racing",
+		"desc":"AK Racing le pone en la primera línea del cambio con diseños nuevos, colores llamativos y atención al detalle líder en la industria. La revolución de AKRacing continúa con nuestra ergonomía única y una calidad de construcción incomparable, todas respaldadas por nuestra garantía sin precedentes de 5/10* años, y termina con la comodidad y el control que ofrecemos a todos nuestros clientes. ¡Únase a la AKRacing Gaming Chair Revolution™ y póngase en el asiento del conductor!",
 		"ranking":2,
 		"img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNy4cXYY1eO6d2CPuYjQu3apYux587QiAZqjt5pXoiF5hCugR0&s",
 		"website":"https://www.akracing.com/"

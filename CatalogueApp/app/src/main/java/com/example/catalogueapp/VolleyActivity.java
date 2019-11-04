@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ProgressBar;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -21,10 +22,15 @@ import org.json.JSONObject;
 
 public class VolleyActivity extends AppCompatActivity {
 
+    ProgressBar spinner;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_volley);
+
+        spinner = findViewById(R.id.progressBar);
+        spinner.setVisibility(View.GONE);
 
         getJsonRequest();
     }
@@ -41,6 +47,8 @@ public class VolleyActivity extends AppCompatActivity {
         String url = "http://10.0.2.2:8000";
 
         final DatabaseTask databaseTask = new DatabaseTask(getApplicationContext(), null);
+
+        spinner.setVisibility(View.VISIBLE);
 
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
@@ -88,5 +96,9 @@ public class VolleyActivity extends AppCompatActivity {
         });
 
         queue.add(request);
+
+        spinner.setVisibility(View.GONE);
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
     }
 }
